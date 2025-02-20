@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres-operator
+  namespace: keycloak
 data:
   # additional_owner_roles: "cron_admin"
   # additional_pod_capabilities: "SYS_NICE"
@@ -9,7 +10,7 @@ data:
   # additional_secret_mount_path: "/some/dir"
   api_port: "8080"
   aws_region: eu-central-1
-  cluster_domain: cluster.local
+  cluster_domain: brakebills.io
   cluster_history_entries: "1000"
   cluster_labels: application:spilo
   cluster_name_label: cluster-name
