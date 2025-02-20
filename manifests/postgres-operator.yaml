@@ -33,6 +33,12 @@ spec:
           runAsNonRoot: true
           readOnlyRootFilesystem: true
           allowPrivilegeEscalation: false
+          seccompProfile:
+            type: "RuntimeDefault"
+          capabilities:
+            drop:
+              - "ALL"
+
         env:
         # provided additional ENV vars can overwrite individual config map entries
         - name: CONFIG_MAP_NAME
